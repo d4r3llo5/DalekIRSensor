@@ -2,10 +2,10 @@
 #include "msp430x22x4.h"           // chip-specific macros & defs
 #include "stdint.h"                // MSP430 data type definitions
 
-// content: pktData[4] = {Pyld leng, base addr, data}
-static char pktData[3] = {0x02,      0xFF,      0xAA};
+// content: pktData[4] = {Pyld leng, base 	addr, 	data}
+static uint8_t pktData[3] = {0x02,   0xFF,	0x55};
 uint8_t pktLen = 3;                 // Packet size
-const uint8_t channel = 10;
+const uint8_t channel = 0;
 
 /*
  * IsrPort2: Interrupt routine to check if the IR sensor has been active
